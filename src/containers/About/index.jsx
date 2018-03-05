@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+import './style.scss';
+
 class About extends React.Component {
 
   constructor(props, context) {

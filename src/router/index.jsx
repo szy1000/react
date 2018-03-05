@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Home from '../Home/index.jsx';
-import About from '../About/index.jsx';
-import News from '../News/index.jsx';
+import Home from '../containers/Home/index.jsx';
+import About from '../containers/About/index.jsx';
+import News from '../containers/News/index.jsx';
 
 
 const BasicExample = () => (

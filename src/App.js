@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/index.jsx';
+
+import RouterMap from './Router/index.jsx'; 
 
 ReactDOM.render(
-  <App/>,
+  <div>
+  	<RouterMap/>
+  </div>,
   document.getElementById('app')
 );
