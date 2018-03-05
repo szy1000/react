@@ -2,26 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-import './style.scss';
-
-class Banner extends React.Component<Props, State> {
+class About extends React.Component {
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+    this.parentData = 55
   }
 
   render() {
     return (
-      <div id="banner">
-        Banner
-        <h1>{this.props.value}</h1>
-        <button onClick={this.props.parentFn}> click</button>  
+      <div id="about">
+        <h1>About</h1>   
       </div>
     );
   }
-
-
 }
 
-export default Banner;
+export default About;

@@ -13,15 +13,9 @@ class Header extends React.Component<Props, State> {
     return (
       <div>
         Header 
-        <h1>{this.props.value}</h1>
-				{console.log(this.props) }
-				{/*<button onClick={this.props.changeParentData}>click</button>*/}
+        <h1>{this.props.sentence}</h1>
       </div>
     );
-  }
-
-  changeProps(){
-  	console.log(1)
   }
 }
 

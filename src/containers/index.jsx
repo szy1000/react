@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import Home from './Home/index.jsx';
+// import About from './About/index.jsx';
+// import News from './News/index.jsx';
+import Irouter from './Router/index.jsx'; 
+
 
 class App extends React.Component<Props, State> {
 
@@ -15,6 +21,7 @@ class App extends React.Component<Props, State> {
     return (
       <div>
         <Home name="home"/>
+        <Irouter/>
       </div>
     );
   }
