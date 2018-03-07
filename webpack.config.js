@@ -9,9 +9,9 @@ var extractPlugin = new ExtractTextPlugin({
 	filename: 'style.css'
 })
 
+var isPro = process.env.NODE_ENV === "production"
 module.exports = {
-	// devtool: isPro ? 'source-map' : 'cheap-module-eval-source-map', // 开发
-	devtool: 'cheap-module-eval-source-map', // 开发
+	devtool: isPro ? 'source-map' : 'cheap-module-eval-source-map', // 开发
 	entry: "./src/App.js",
 	output: {
 		path: path.resolve(__dirname,"dist"),
