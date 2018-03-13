@@ -5,6 +5,9 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 var cleanWebpackPlugin = require('clean-webpack-plugin');
 var openBrowserPlugin = require('open-browser-webpack-plugin');
 
+const apiMocker = require('webpack-api-mocker');
+const mocker = require('./mock/mocker.js');
+
 var extractPlugin = new ExtractTextPlugin({
 	filename: 'style.css'
 })
@@ -13,6 +16,17 @@ var isPro = process.env.NODE_ENV === "production"
 module.exports = {
 	devtool: isPro ? 'source-map' : 'cheap-module-eval-source-map', // 开发
 	entry: "./src/App.js",
+	devServer: {
+		...
+		// host: '0.0.0.0',
+		// port: 3000, 
+    before(app){
+     apiMocker(app, path.resolve('./mock/mocker.js'),{
+     		'GET /api/user/list': 'http://localhost:3000',
++       'GET /api/prod/*': 'http://localhost:3000',
+     })
+    }
+	},
 	output: {
 		path: path.resolve(__dirname,"dist"),
 		filename: 'bundle.js',
