@@ -17,14 +17,10 @@ module.exports = {
 	devtool: isPro ? 'source-map' : 'cheap-module-eval-source-map', // 开发
 	entry: "./src/App.js",
 	devServer: {
-		...
-		// host: '0.0.0.0',
-		// port: 3000, 
+		// host: '127.0.0.1',
+		port: 3000, 
     before(app){
-     apiMocker(app, path.resolve('./mock/mocker.js'),{
-     		'GET /api/user/list': 'http://localhost:3000',
-+       'GET /api/prod/*': 'http://localhost:3000',
-     })
+     apiMocker(app, path.resolve('./mock/mocker.js'))
     }
 	},
 	output: {
