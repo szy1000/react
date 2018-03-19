@@ -18,7 +18,7 @@ module.exports = {
 	entry: "./src/App.js",
 	devServer: {
 		// host: '127.0.0.1',
-		port: 3000, 
+		// port: 3000, 
     before(app){
      apiMocker(app, path.resolve('./mock/mocker.js'))
     }
@@ -97,7 +97,7 @@ module.exports = {
 		// 	template: 'src/users.html',
 		// 	chunks:[]
 		// }),
-		new openBrowserPlugin({ url: 'http://localhost:8080' }),
+		// new openBrowserPlugin({ url: 'http://localhost:8080' }),
 		new cleanWebpackPlugin(['dist']) //删除之前的dist文件夹
 	]
 };

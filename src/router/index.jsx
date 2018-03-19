@@ -25,7 +25,7 @@ const BasicExample = () => (
     <div>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
@@ -37,16 +37,16 @@ const BasicExample = () => (
 
       <hr />
 
-      <Route path="/:id" component={Child} />
+      {/*<Route path="/:id" component={Child} />
       <Route
         path="/order/:direction(asc|desc)"
         component={ComponentWithRegex}
-      />
+      />*/}
 
 
-      {/*<Route exact path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/news" component={News} />*/}
+      <Route path="/news" component={News} />
     </div>
   </Router>
 );
