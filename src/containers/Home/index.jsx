@@ -19,6 +19,7 @@ class Home extends React.Component {
   render() {
     return (
       <div id="home">
+        <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
         <button onClick={()=>{
           this.setState({
             value: (this.state.value + 1)
