@@ -1,6 +1,7 @@
 @import "variables";
 @import "common";
 @import "swiper.css";
+@import "reset.css";
 
 .wrapper{
 	margin: 50px auto;
@@ -13,5 +14,20 @@
 		padding: 10px 20px;
 		border: 1px solid #ccc;
 		border-radius:  $base-radius;
+	}
+}
+
+.links{
+	display: flex;
+	li{
+		flex-grow: 1;
+		a{
+			display: block;
+			padding: 30px 0;
+			text-align: center;
+			&.active{
+				background-color: red
+			}
+		}
 	}
 }

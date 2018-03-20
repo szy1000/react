@@ -23,7 +23,7 @@ const ComponentWithRegex = ({ match }) => (
 const BasicExample = () => (
   <HashRouter>
     <div>
-      <ul>
+      <ul className="links">
         <li>
           <Link to="/">Home</Link>
         </li>
