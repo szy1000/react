@@ -21,7 +21,7 @@ const ComponentWithRegex = ({ match }) => (
 // HashRouter 可以记住路由
 
 const BasicExample = () => (
-  <Router>
+  <HashRouter>
     <div>
       <ul>
         <li>
@@ -48,7 +48,7 @@ const BasicExample = () => (
       <Route path="/about" component={About} />
       <Route path="/news" component={News} />
     </div>
-  </Router>
+  </HashRouter>
 );
 
 
