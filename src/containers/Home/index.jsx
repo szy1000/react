@@ -18,7 +18,7 @@ class Home extends React.Component {
 
   render() {
     // todo 如何让当前的URL高亮显示
-    console.log(this.props.match.params);
+    // console.log(this.props.match.params);
     return (
       <div id="home">
         <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>

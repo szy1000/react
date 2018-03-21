@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { BrowserRouter as Router, HashRouter, Route, Link } from "react-router-dom";
 
 import Home from '../containers/Home/index.jsx';
@@ -17,39 +18,60 @@ const ComponentWithRegex = ({ match }) => (
     <h3>Only asc/desc are allowed: {match.params.direction}</h3>
   </div>
 );
-
 // HashRouter 可以记住路由
 
-const BasicExample = () => (
-  <HashRouter>
-    <div>
-      <ul className="links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/news">News</Link>
-        </li>
-      </ul>
+class BasicExample extends React.Component {
+  constructor(props, context) {
+    super(props, context)
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+    this.state = {
+      selectIndex: 0
+    };
+    this.linksMap = [
+      {
+        name: 'Home',
+        path: '/'
+      },
+      {
+        name: 'About',
+        path: '/about'
+      },
+      {
+        name: 'News',
+        path: '/news'
+      }
+    ]
+  }
 
-      <hr />
-
-      {/*<Route path="/:id" component={Child} />
-      <Route
-        path="/order/:direction(asc|desc)"
-        component={ComponentWithRegex}
-      />*/}
-
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/news" component={News} />
-    </div>
-  </HashRouter>
-);
-
+  render(){
+    return (
+      <HashRouter>
+        <div>
+          <ul className="links">
+            {
+              this.linksMap.map((item,index) => {
+                return <li key={index} className={ index === this.state.selectIndex? 'active': ''} onClick={()=>{
+                  this.setState({
+                    selectIndex: index
+                  })
+                }}>
+                  <Link to={item.path}>{item.name}</Link>
+                </li>
+              })
+            }
+          </ul>
+          {/*<Route path="/:id" component={Child} />
+          <Route
+            path="/order/:direction(asc|desc)"
+            component={ComponentWithRegex}
+          />*/}
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/news" component={News} />
+        </div>
+      </HashRouter>
+    )
+  }
+}
 
 export default BasicExample;

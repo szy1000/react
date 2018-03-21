@@ -1,0 +1,35 @@
+@import '../../static/css/variables.scss';
+
+#title{
+	display: flex;
+	padding: 20px 15px;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: #fff;
+	.brand{
+		display: flex;
+		flex: 0 0 80%;
+		width: 80%;
+		align-items: center;
+		img{
+			margin-left: 10px;
+			height: 30PX;
+		}
+		p{
+			font-size: 15PX;
+		}
+	}
+	.more{
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		a{
+			display: flex;
+			align-items: center;
+			font-size: 10PX;
+		}
+		img{
+			height: 15PX
+		}
+	}
+}

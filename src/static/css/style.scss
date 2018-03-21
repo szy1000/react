@@ -18,15 +18,28 @@
 }
 
 .links{
+	position: relative;
 	display: flex;
+	&:after{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1PX;
+		content: '';
+		background-color: #ccc;
+	}
 	li{
 		flex-grow: 1;
 		a{
 			display: block;
 			padding: 30px 0;
 			text-align: center;
-			&.active{
-				background-color: red
+		}
+		&.active{
+			background-color: red;
+			a{
+				color: #fff;
 			}
 		}
 	}
