@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-import Title from '../../components/Title/index.jsx';
+// import Title from '../../components/Title/index.jsx';
+import Title from '../../components/';
 
 class News extends React.Component {
 

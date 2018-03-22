@@ -11,7 +11,6 @@ class Title extends React.Component<Props, State> {
   }
 
   render() {
-    console.log();
     return (
       <div id="title">
         <div className="brand">

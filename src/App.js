@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+// import fn from './containers/redux-demo.jsx'
+
+import configureStore from './redux/store/configureStore.jsx';
+
+import RouterMap from './Router/index.jsx';
 
 import './static/css/style.scss'
 
-import RouterMap from './Router/index.jsx'; 
+const store = configureStore();
 
 ReactDOM.render(
-  <div>
+	<Provider store={store}>
   	<RouterMap/>
-  </div>,
-  document.getElementById('app')
+  </Provider>,
+	document.getElementById('app')
 );

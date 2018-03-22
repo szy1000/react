@@ -13,7 +13,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('init');
     return (
       <div>
         { this.state.initDone ? this.props.children : '<div>正在加载...</div>'}
