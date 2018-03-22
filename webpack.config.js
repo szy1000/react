@@ -47,67 +47,62 @@ module.exports = {
         // publicPath: './dist'
     },
     module: {
-        rules: [
-            {
-                test: /\.(jsx|js|tsx)$/,
+        rules: [{
+            test: /\.(jsx|js|tsx)$/,
+            use: [{
+                loader: "babel-loader",
+                options: {
+                    presets: ['babel-preset-react'].map(require.resolve)
+                    // presets: ["es2015", "react"].map(require.resolve)
+                }
+            }]
+        }, {
+            test: /\.scss$/,
+            use: extractPlugin.extract({
+                // use: ['css-loader', 'sass-loader'],
                 use: [
-                    {
-                        loader: "babel-loader",
-                        options: {
-                            presets: ['babel-preset-react'].map(require.resolve)
-                            // presets: ["es2015", "react"].map(require.resolve)
-                        }
+                    'css-loader', {
+                        loader: 'postcss-loader',
+                        options: postcssOpts
+                    }, {
+                        loader: 'sass-loader'
                     }
                 ]
-            },
-            {
-                test: /\.scss$/,
-                use: extractPlugin.extract({
-                    // use: ['css-loader', 'sass-loader'],
-                    use: [
-                        'css-loader',
-                        {loader: 'postcss-loader', options: postcssOpts},
-                        {loader: 'sass-loader'}
-                    ]
-                })
-            },
-            {
-                test: /\.html$/,
-                use: ['html-loader']
-            },
-            {
-                test: /\.(jpg|png|jpeg)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash:6].[ext]',
-                        outputPath: 'images/',
-                        // publicPath: 'images/'
-                    },
-                    loader: 'url-loader',
-                    options: {
-                        limit: 8192
-                    }
-                }]
-            },
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        }
-                    }
-                ],
-                exclude: path.resolve(__dirname, 'src/index.html')
-            }
-        ]
+            })
+        }, {
+            test: /\.html$/,
+            use: ['html-loader']
+        }, {
+            test: /\.(jpg|png|jpeg)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[hash:6].[ext]',
+                    outputPath: 'images/',
+                    // publicPath: 'images/'
+                },
+                loader: 'url-loader',
+                options: {
+                    limit: 8192
+                }
+            }]
+        }, {
+            test: /\.html$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                }
+            }],
+            exclude: path.resolve(__dirname, 'src/index.html')
+        }]
     },
-
+    resolve: {
+        extensions: ['.js', 'jsx']
+    },
     plugins: [
         autoprefixer,
-        new webpack.HotModuleReplacementPlugin(),  //开启热更新
+        new webpack.HotModuleReplacementPlugin(), //开启热更新
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -122,7 +117,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 minimize: true,
-                postcss: function () {// 高清方案，将px转换为rem
+                postcss: function() { // 高清方案，将px转换为rem
                     return [
                         require('postcss-pxtorem')({
                             rootValue: 75,

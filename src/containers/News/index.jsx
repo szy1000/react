@@ -12,11 +12,10 @@ class News extends React.Component {
   }
 
   render() {
-    // console.log(this.props.match.params.id)
     return (
       <div id="news">
         <Title title="产品列表"/>
-        <h1>News</h1>   
+        <h1>News {this.props.match.params.id}</h1>   
       </div>
     );
   }
