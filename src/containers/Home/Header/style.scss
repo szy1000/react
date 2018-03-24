@@ -1,4 +1,62 @@
 @import '../../../static/css/variables.scss';
 
+
+$font-brand:  #eee;
 #Home_header{
+	display: flex;
+	padding: 40px 20px;
+	color: $white;
+	background-color: $brand;
+	.place{
+		display: flex;
+		padding-left: 20px;
+		min-width: 100px;
+		align-items: center;
+		i{
+			margin: 0 40px;
+		}
+	}
+	.search{
+		position: relative;
+		flex: 1;
+		border-radius: 200px;
+		overflow: hidden;
+		background-color: $white;
+		i{
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			color: $font-brand;
+		}
+		input{
+			box-sizing: border-box;
+			padding: 40px 40px 40px 140px;
+			width: 100%;
+			&:active,&:visited,&:focus{
+				outline: none;
+			}
+		}
+	}
+	.user{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 10%;
+		text-align: center;
+	}
+
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $font-brand;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    color:    $font-brand;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    color:    $font-brand;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    color:    $font-brand;
+	}
+
+
 }
