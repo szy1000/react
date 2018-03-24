@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import './style.scss';
 
 class Header extends React.Component<Props, State> {
 
@@ -11,8 +12,8 @@ class Header extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>
-        Header 
+      <div id="Home_header">
+        <p><i className="iconfont icon-search"></i></p>
         <h1>{this.props.sentence}</h1>
       </div>
     );

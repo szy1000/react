@@ -57,7 +57,7 @@ module.exports = {
                 }
             }]
         }, {
-            test: /\.scss$/,
+            test: /\.(css|scss)$/,
             use: extractPlugin.extract({
                 // use: ['css-loader', 'sass-loader'],
                 use: [
@@ -95,6 +95,9 @@ module.exports = {
                 }
             }],
             exclude: path.resolve(__dirname, 'src/index.html')
+        },{
+            test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, 
+            loader:'url-loader?limit=5000'
         }]
     },
     resolve: {
@@ -133,7 +136,7 @@ module.exports = {
         // 	template: 'src/users.html',
         // 	chunks:[]
         // }),
-        // new openBrowserPlugin({url: 'http://localhost:8080'}),
+        new openBrowserPlugin({url: 'http://localhost:8080'}),
         new cleanWebpackPlugin(['dist']) //删除之前的dist文件夹
     ]
 };

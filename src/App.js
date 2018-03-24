@@ -8,6 +8,7 @@ import configureStore from './redux/store/configureStore.jsx';
 
 import RouterMap from './Router/index.jsx';
 
+import './static/css/iconfont.scss'
 import './static/css/style.scss'
 
 const store = configureStore();

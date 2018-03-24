@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.state = {
-      initDone: false
+      initDone: true
     }
   }
 

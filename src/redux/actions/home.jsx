@@ -4,3 +4,10 @@ export function homeUpdate(data){
 		data
 	}
 }
+
+export function testUpdate(data){
+	return {
+		type: 'TEST_UPDATE',
+		data
+	}
+}

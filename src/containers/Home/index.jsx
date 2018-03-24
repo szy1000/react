@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as homeActions from '../../redux/actions/home.jsx'
 
-import Banner from './Banner/index.js';
+import Banner from './Banner';
 import Header from './Header/index.jsx';
 
 class Home extends React.Component {
@@ -22,9 +22,9 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div id="home">
+        <Header test={this.parentData} {...this.props} {...this.state}/>
         <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
         <button onClick={()=>{
           this.setState({
@@ -32,10 +32,9 @@ class Home extends React.Component {
           })
         }}>add</button>
         <div>
-          地址：{this.props.home && this.props.home.address}  
-          电话：{this.props.home && this.props.home.tel } 
+          地址：{this.props.home.address}  
+          电话：{this.props.home.tel} 
         </div>
-        <Header test={this.parentData} {...this.props} {...this.state}/>
         <Banner {...this.props} parentFn={this.parentFn.bind(this)} {...this.state}/>
       </div>
     );
@@ -43,7 +42,8 @@ class Home extends React.Component {
 
   componentDidMount(){
     this.props.homeActions.homeUpdate({
-      home: { address:'initData',tel: '13900000000' }
+      address: 'initData',
+      tel: '1390000000'
     })
   }
 
@@ -63,16 +63,16 @@ class Home extends React.Component {
 function mapStateToProps(state){
   return {
     home: state.home,
+    test: state.test
   }
 }
 
 
 function mapDispatchToProps(dispatch){
   return {
-    homeActions: bindActionCreators(homeActions, dispatch)
+    homeActions: bindActionCreators(homeActions, dispatch),
   }
 }
-// export default Home;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
