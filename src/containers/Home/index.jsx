@@ -8,6 +8,7 @@ import * as homeActions from '../../redux/actions/home.jsx'
 
 import Banner from './Banner';
 import Header from './Header/index.jsx';
+import Category from './Category/index.jsx';
 
 class Home extends React.Component {
 
@@ -24,7 +25,8 @@ class Home extends React.Component {
   render() {
     return (
       <div id="home">
-        <Header test={this.parentData} {...this.props} {...this.state}/>
+        <Header cityName={'南京'} test={this.parentData} {...this.props} {...this.state}/>
+        <Category/>
         <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
         <button onClick={()=>{
           this.setState({

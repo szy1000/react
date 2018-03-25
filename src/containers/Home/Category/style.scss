@@ -1,0 +1,30 @@
+@import '../../../static/css/variables.scss';
+
+#Home_category{
+	padding: 100px 90px;
+	background-color: $white;	
+	.services_wrapper{
+		display: flex;
+		// flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+	.services{
+		width: 300px;
+		height: 320px;
+		text-align: center;
+		img{
+			margin-bottom: -20%;
+			width:80%;
+			border-radius: 50%;
+		}
+	}
+	
+	.swiper-pagination{
+		bottom: 0
+	}
+	.swiper-pagination-bullet-active{
+		background-color: $brand;
+	}
+}

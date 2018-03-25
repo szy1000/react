@@ -49,6 +49,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(jsx|js|tsx)$/,
+            exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
             use: [{
                 loader: "babel-loader",
                 options: {
@@ -96,7 +97,7 @@ module.exports = {
             }],
             exclude: path.resolve(__dirname, 'src/index.html')
         },{
-            test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, 
+            test:/\.(woff|woff2|svg|ttf|eot)($|\?)/i, 
             loader:'url-loader?limit=5000'
         }]
     },
