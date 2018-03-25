@@ -144,9 +144,9 @@ class Category extends React.Component<Props, State> {
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
-        clickable: true
+        clickable: false
       },
-      autoplay: false,
+      autoplay: true,
       spaceBetween: 30,
     }
 

@@ -36,3 +36,11 @@
 		}
 	}
 }
+
+.clearfix{
+	&:after{
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
