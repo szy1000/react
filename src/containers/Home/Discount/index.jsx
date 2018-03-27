@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './style.scss';
 
+import axios from 'axios';
 import {getAdDataReq} from '../../../fetch/home/home.jsx';
 
 class Discount extends React.Component<Props, State> {
@@ -34,6 +35,10 @@ class Discount extends React.Component<Props, State> {
   }
 
   componentDidMount(){
+    
+    axios.all([getAdDataReq()]).then((res)=>{
+      console.log(res)
+    })
     const result = getAdDataReq();
     result.then((res) => {
       return res.json();
