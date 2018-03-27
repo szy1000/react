@@ -35,12 +35,13 @@ class Discount extends React.Component<Props, State> {
   }
 
   componentDidMount(){
-    
-    axios.all([getAdDataReq()]).then((res)=>{
-      console.log(res)
+    axios.all([this.initData()]).then((res)=>{
+      console.log(this.state.data)
     })
-    const result = getAdDataReq();
-    result.then((res) => {
+  }
+  initData() {
+    const result = getAdDataReq('zhou',28);
+    return result.then((res) => {
       return res.json();
     }).then((json) => {
       if(json.length){
