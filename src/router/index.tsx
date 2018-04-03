@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { HashRouter, Route, Link } from "react-router-dom";
 
-import App from '../containers/index.jsx';
-import Home from '../containers/Home/index.jsx';
+import App from '../containers/index';
+import Home from '../containers/Home/index';
 // import About from '../containers/About/index.jsx';
 // import News from '../containers/News/index.jsx';
 

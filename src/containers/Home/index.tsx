@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+// import * as PureRenderMixin from 'react-addons-pure-render-mixin';
 
 class Home extends React.Component {
 
