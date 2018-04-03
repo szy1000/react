@@ -4,7 +4,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import './style.scss';
 
-class Banner extends React.Component<Props, State> {
+class Banner extends React.Component {
 
   constructor(props, context) {
     super(props, context);

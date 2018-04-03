@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './style.scss';
 
-class Header extends React.Component<Props, State> {
+class Header extends React.Component {
 
   constructor(props, context) {
     super(props, context);

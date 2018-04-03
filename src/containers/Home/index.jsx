@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import {connect} from 'react-redux';
@@ -51,7 +50,7 @@ class Home extends React.Component {
   componentDidMount(){
     this.props.homeActions.homeUpdate({
       address: 'initData',
-      tel: '1390000000'
+      tel: '139'
     })
   }
 

@@ -33,7 +33,7 @@ const postcssOpts = {
 
 module.exports = {
     devtool: isPro ? 'source-map' : 'cheap-module-eval-source-map', // 开发
-    entry: "./src/App.js",
+    entry: "./src/App.tsx",
     devServer: {
         host: '0.0.0.0',
         // port: 8080,
@@ -48,7 +48,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(jsx|js|tsx)$/,
+            test: /\.(jsx|js|ts|tsx)$/,
             exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
             use: [{
                 loader: "babel-loader",
@@ -102,7 +102,7 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: ['.js', 'jsx']
+        extensions: ['js', 'jsx','ts','tsx']
     },
     plugins: [
         autoprefixer,

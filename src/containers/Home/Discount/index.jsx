@@ -1,12 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as homeActions from '../../../redux/actions/home.jsx'
+
 import './style.scss';
 
 import axios from 'axios';
 import {getAdDataReq} from '../../../fetch/home/home.jsx';
 
-class Discount extends React.Component<Props, State> {
+class Discount extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -21,7 +25,7 @@ class Discount extends React.Component<Props, State> {
       <div id="Home_discount">
         <h2>超值特惠</h2>
         <div className="ad-container clearfix">
-          { this.state.data.map((item, index) => {
+          {this.state.data.map((item, index) => {
             return <div key={index} className="ad-item222 float-left">
               <a href={item.link} target="_blank">
                 <img src={item.img} alt={item.title}/>
@@ -34,17 +38,18 @@ class Discount extends React.Component<Props, State> {
     );
   }
 
-  componentDidMount(){
-    axios.all([this.initData()]).then((res)=>{
+  componentDidMount() {
+    axios.all([this.initData()]).then((res) => {
       console.log(this.state.data)
     })
   }
+
   initData() {
-    const result = getAdDataReq('zhou',28);
+    const result = getAdDataReq('zhou', 28);
     return result.then((res) => {
       return res.json();
     }).then((json) => {
-      if(json.length){
+      if (json.length) {
         this.setState({
           data: json
         })
@@ -53,4 +58,21 @@ class Discount extends React.Component<Props, State> {
   }
 }
 
-export default Discount;
+function mapStateToProps(state){
+  return {
+    home: state.home,
+    test: state.test
+  }
+}
+
+
+function mapDispatchToProps(dispatch){
+  return {
+    homeActions: bindActionCreators(homeActions, dispatch),
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Discount);
+
