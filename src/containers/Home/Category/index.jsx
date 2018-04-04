@@ -7,7 +7,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import './style.scss';
 
-class Category extends React.Component<Props, State> {
+class Category extends React.Component {
 
   constructor(props, context) {
     super(props, context);
