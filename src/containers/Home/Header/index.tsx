@@ -1,16 +1,24 @@
-import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import * as React from 'react';
+import * as PureRenderMixin from 'react-addons-pure-render-mixin';
 import './style.scss';
 
-class Header extends React.Component {
+export interface Props{
+  sentence?: string,
+  cityName: string
+}
 
-  constructor(props, context) {
+export interface State{
+
+}
+
+class Header extends React.Component<Props, State> {
+
+  constructor(props:any, context:any) {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
   render() {
-    console.log(this.props.sentence)
     return (
       <div id="Home_header">
         <div className="place">{this.props.cityName}<i className="iconfont icon-angle-down"/></div>

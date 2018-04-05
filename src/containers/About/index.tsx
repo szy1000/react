@@ -1,13 +1,17 @@
 import * as React from 'react';
 import * as PureRenderMixin from 'react-addons-pure-render-mixin';
 
+import './style.scss';
 
-import Header from './Header/index';
-import Category from './Category/index.jsx';
+export interface Props {
 
+}
 
-class Home extends React.Component {
+export interface State {
 
+}
+
+class About extends React.Component<Props, State> {
   constructor(props: any, context: any) {
     super(props, context)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -15,13 +19,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header cityName={"南京"}/>
-        <Category/>
+      <div id="about">
+        <h1>About</h1>
       </div>
-    )
-  };
+    );
+  }
 }
 
-
-export default Home;
+export default About;

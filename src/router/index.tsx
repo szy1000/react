@@ -3,8 +3,8 @@ import { HashRouter, Route, Link } from "react-router-dom";
 
 import App from '../containers/index';
 import Home from '../containers/Home/index';
-// import About from '../containers/About/index.jsx';
-// import News from '../containers/News/index.jsx';
+import About from '../containers/About/index';
+import News from '../containers/News/index.jsx';
 
 // HashRouter 可以记住路由
 
@@ -57,7 +57,8 @@ class BasicExample extends React.Component<Props, State> {
           </ul>
           <App>
             <Route index path="/home" component={Home}/>
-
+            <Route index path="/about" component={About}/>
+            <Route index path="/news" component={News}/>
           </App>
         </div>
       </HashRouter>

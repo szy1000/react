@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactSwiper from 'react-id-swiper';
 // import ReactSwipe from 'react-swipe';
 // import Swiper from 'react-slider-swiper';
