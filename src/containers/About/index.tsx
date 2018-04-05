@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as PureRenderMixin from 'react-addons-pure-render-mixin';
+import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import './style.scss';
 

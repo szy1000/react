@@ -1,18 +1,27 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as homeActions from '../../../redux/actions/home.jsx'
 
 import './style.scss';
 
 import axios from 'axios';
-import {getAdDataReq} from '../../../fetch/home/home.jsx';
+import { getAdDataReq } from '../../../fetch/home/home.jsx';
 
-class Discount extends React.Component {
 
-  constructor(props, context) {
+export interface Props {
+
+}
+
+export interface State {
+  data: Array<Object>,
+}
+
+class Discount extends React.Component<Props, State> {
+
+  constructor(props: any, context: any) {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.state = {
@@ -25,7 +34,7 @@ class Discount extends React.Component {
       <div id="Home_discount">
         <h2>超值特惠</h2>
         <div className="ad-container clearfix">
-          {this.state.data.map((item, index) => {
+          {this.state.data.map((item: any, index: any) => {
             return <div key={index} className="ad-item222 float-left">
               <a href={item.link} target="_blank">
                 <img src={item.img} alt={item.title}/>
@@ -58,7 +67,7 @@ class Discount extends React.Component {
   }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state: any) {
   return {
     home: state.home,
     test: state.test
@@ -66,11 +75,12 @@ function mapStateToProps(state){
 }
 
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch: any) {
   return {
     homeActions: bindActionCreators(homeActions, dispatch),
   }
 }
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
