@@ -20,8 +20,14 @@ export interface Props {
 
 export interface State {
   value: number,
-  sentence?: string
+  sentence?: string,
+  home: any
 }
+
+// @connect(
+//   state => state.home,
+//   dispatch => bindActionCreators(homeActions, dispatch)
+// )
 
 class Home extends React.Component<Props, State> {
 
@@ -29,7 +35,8 @@ class Home extends React.Component<Props, State> {
     super(props, context)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.state = {
-      value: 5
+      home: {},
+      value: 5,
     }
   }
 
@@ -87,3 +94,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home);
+
+// export default Home
