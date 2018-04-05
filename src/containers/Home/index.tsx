@@ -1,13 +1,13 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-
 import Header from './Header/index';
 import Category from './Category/index.jsx';
 import Discount from './Discount/index';
+import Banner from './Banner/index';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as homeActions from '../../redux/actions/home.jsx'
 
 // import { bindActionCreators } from "_redux@3.7.2@redux";
@@ -19,7 +19,8 @@ export interface Props {
 }
 
 export interface State {
-  value: number
+  value: number,
+  sentence?: string
 }
 
 class Home extends React.Component<Props, State> {
@@ -27,6 +28,9 @@ class Home extends React.Component<Props, State> {
   constructor(props: any, context: any) {
     super(props, context)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+    this.state = {
+      value: 5
+    }
   }
 
   render() {
@@ -36,8 +40,8 @@ class Home extends React.Component<Props, State> {
         <Category/>
         <Discount/>
         <div>
-          地址：{this.props.home}
-          电话：{this.props.home}
+          {/*地址：{this.props.home}*/}
+          {/*电话：{this.props.home}*/}
         </div>
         <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
         <button onClick={() => {
@@ -46,9 +50,23 @@ class Home extends React.Component<Props, State> {
           })
         }}>add
         </button>
+        <Banner {...this.props} parentFn={this.parentFn.bind(this)} {...this.state}/>
       </div>
     )
   };
+
+  parentFn() {
+    this.setState({
+      value: (this.state.value - 1)
+    })
+  }
+
+  changeParentData() {
+    this.setState({
+      sentence: 'has\'t changed'
+    })
+  }
+
 }
 
 function mapStateToProps(state: any) {
