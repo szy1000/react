@@ -1,11 +1,9 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
 import 'core-js/es6/map';
 import 'core-js/es6/set';
 import 'core-js/es6/symbol';
 import 'core-js/es6/promise';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 // import fn from './containers/redux-demo.jsx'

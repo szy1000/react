@@ -16,12 +16,13 @@ import * as homeActions from '../../redux/actions/home.jsx'
 
 export interface Props {
   home?: Object,
+  homeActions: any
 }
 
 export interface State {
   value: number,
   sentence?: string,
-  home: any
+  home: any,
 }
 
 // @connect(
@@ -30,7 +31,6 @@ export interface State {
 // )
 
 class Home extends React.Component<Props, State> {
-
   constructor(props: any, context: any) {
     super(props, context)
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -47,8 +47,8 @@ class Home extends React.Component<Props, State> {
         <Category/>
         <Discount/>
         <div>
-          {/*地址：{this.props.home}*/}
-          {/*电话：{this.props.home}*/}
+          地址：{this.props.home.address}
+          电话：{this.props.home.tel}
         </div>
         <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
         <button onClick={() => {
@@ -61,6 +61,13 @@ class Home extends React.Component<Props, State> {
       </div>
     )
   };
+
+  componentDidMount(){
+    this.props.homeActions.homeUpdate({
+      address: 'initData',
+      tel: '139'
+    })
+  }
 
   parentFn() {
     this.setState({
