@@ -1,6 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+
 import Header from './Header/index';
 import Category from './Category/index.jsx';
 import Discount from './Discount/index';

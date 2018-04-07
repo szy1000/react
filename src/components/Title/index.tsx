@@ -1,11 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './style.scss';
 
+export interface Props {
+  title: string
+}
+
+export interface State {
+  title: string
+}
+
 class Title extends React.Component<Props, State> {
 
-  constructor(props, context) {
+  constructor(props: any, context: any) {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }

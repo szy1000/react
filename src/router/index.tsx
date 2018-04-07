@@ -4,7 +4,7 @@ import { HashRouter, Route, Link } from "react-router-dom";
 import App from '../containers/index';
 import Home from '../containers/Home/index';
 import About from '../containers/About/index';
-import News from '../containers/News/index.jsx';
+import News from '../containers/News/index';
 
 // HashRouter 可以记住路由
 

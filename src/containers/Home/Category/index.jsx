@@ -16,14 +16,14 @@ class Category extends React.Component {
   render() {
     const items = [
       {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224203170-1528315005.png',
+        image: 'jingdian.png',
         title: '景点',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224309185-1519181081.png',
+        image: 'KTV.png',
         title: 'KTV',
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224150045-30962603.png',
+        image: 'shopping.png',
         title: '购物',
         link: 'http://jd.com'
       }, {
@@ -100,42 +100,42 @@ class Category extends React.Component {
     ];
     const items3 = [
       {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224354951-1102565687.png',
+        image: 'ribencai.png',
         title: '日本菜',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224419998-1442330810.png',
+        image: 'spa.png',
         title: 'SPA',
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224340545-213074048.png',
+        image: 'wedding.png',
         title: '结婚',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224415013-114294334.png',
+        image: 'study.png',
         title: '学习培训',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224113560-1012968440.png',  
+        image: 'xican.png',
         title: '西餐',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224323467-1926976043.png',
+        image: 'huochepiao.png',
         title: '火车机票',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224402576-1611337354.png',
+        image: 'BBQ.png',
         title: '烧烤',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224333185-1082315113.png',
-        title: '酒庄',
+        image: 'jiazhuang.png',
+        title: '家装',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224315779-157132725.png',
+        image: 'pet.png',
         title: '宠物',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224348467-646596364.png',
+        image: 'all.png',
         title: '全部分类',
       }
     ];
