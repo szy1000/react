@@ -1,7 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-
 import Header from './Header/index';
 import Category from './Category/index.jsx';
 import Discount from './Discount/index';
@@ -10,10 +9,6 @@ import Banner from './Banner/index';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as homeActions from '../../redux/actions/home.jsx'
-
-// import { bindActionCreators } from "_redux@3.7.2@redux";
-// import * as homeActions from "../../redux/actions/home";
-
 
 export interface Props {
   home?: Object,
@@ -26,8 +21,21 @@ export interface State {
   home: any,
 }
 
+function mapStateToProps(state: any) {
+  return {
+    home: state.home,
+  }
+}
+
+
+function mapDispatchToProps(dispatch: any) {
+  return {
+    homeActions: bindActionCreators(homeActions, dispatch),
+  }
+}
+
 // @connect(
-//   state => state.home,
+//   state =>  state.home,
 //   dispatch => bindActionCreators(homeActions, dispatch)
 // )
 
@@ -63,7 +71,7 @@ class Home extends React.Component<Props, State> {
     )
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.homeActions.homeUpdate({
       address: 'initData',
       tel: '139'
@@ -84,19 +92,19 @@ class Home extends React.Component<Props, State> {
 
 }
 
-function mapStateToProps(state: any) {
-  return {
-    home: state.home,
-    test: state.test
-  }
-}
-
-
-function mapDispatchToProps(dispatch: any) {
-  return {
-    homeActions: bindActionCreators(homeActions, dispatch),
-  }
-}
+// function mapStateToProps(state: any) {
+//   return {
+//     home: state.home,
+//     test: state.test
+//   }
+// }
+//
+//
+// function mapDispatchToProps(dispatch: any) {
+//   return {
+//     homeActions: bindActionCreators(homeActions, dispatch),
+//   }
+// }
 
 export default connect(
   mapStateToProps,

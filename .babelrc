@@ -1,0 +1,32 @@
+{
+  "presets": [
+    "es2015",
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "syntax-dynamic-import"
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
+}

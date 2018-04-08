@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "allowJs": true,
     "sourceMap": true,
     "experimentalDecorators": true,
@@ -9,23 +12,10 @@
     "moduleResolution": "node",
     "target": "es5",
     "jsx": "react",
-    "module": "esnext",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": false,
-    "suppressImplicitAnyIndexErrors": false,
-    "noUnusedLocals": true
+    "module": "esnext"
   },
   "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
+    "node_modules"
   ],
   "include": [
     "src/**/*"
