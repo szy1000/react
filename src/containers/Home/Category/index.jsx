@@ -2,6 +2,7 @@ import React from 'react';
 import ReactSwiper from 'react-id-swiper';
 // import ReactSwipe from 'react-swipe';
 // import Swiper from 'react-slider-swiper';
+import * as config from '../../../config/';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import './style.scss';
@@ -16,126 +17,126 @@ class Category extends React.Component {
   render() {
     const items = [
       {
-        image: 'jingdian.png',
+        image: config.IMAGE_PATH + 'jingdian.png',
         title: '景点',
         link: 'http://jd.com'
       }, {
-        image: 'KTV.png',
+        image: config.IMAGE_PATH + 'KTV.png',
         title: 'KTV',
       }, {
-        image: 'shopping.png',
+        image: config.IMAGE_PATH + 'shopping.png',
         title: '购物',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224237513-176380794.png',
+        image: config.IMAGE_PATH + 'lifeService.png',
         title: '生活服务',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224256732-145714491.png',
+        image: config.IMAGE_PATH + 'exercise.png',
         title: '运动健身',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224222123-643915682.png',
+        image: config.IMAGE_PATH + 'haircut.png',
         title: '美发',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224229451-475201730.png',
+        image: config.IMAGE_PATH + 'withchild.png',
         title: '亲子',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224244545-1583700011.png',
+        image: config.IMAGE_PATH + 'snack.png',
         title: '小吃快餐',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224113560-1012968440.png',
+        image: config.IMAGE_PATH +  'selfservice.png',
         title: '自助餐',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224210732-490953965.png',
+        image: config.IMAGE_PATH + 'bar.png',
         title: '酒吧',
         link: 'http://jd.com'
       }
     ];
     const items2 = [
       {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224409107-2018112337.png',
+        image: config.IMAGE_PATH + 'food.png',
         title: '美食',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224033873-290248113.png',
+        image: config.IMAGE_PATH + 'movie.png',
         title: '电影',
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224051513-2057698989.png',        
+        image: config.IMAGE_PATH + 'hotel.png',
         title: '酒店',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224129076-2058206915.png',
+        image: config.IMAGE_PATH + 'amusement.png',
         title: '休闲娱乐',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224121920-424129491.png',
+        image: config.IMAGE_PATH + 'take_out.png',
         title: '外卖',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224046342-1896393176.png',
+        image: config.IMAGE_PATH + 'hot_pot.png',
         title: '火锅',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224057670-257626875.png',
+        image: config.IMAGE_PATH + 'beauty.png',
         title: '丽人',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224040842-2050913385.png',
+        image: config.IMAGE_PATH + 'vacation.png',
         title: '度假出行',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224144060-1009120401.png',
+        image: config.IMAGE_PATH + 'massag.png',
         title: '足疗按摩',
         link: 'http://jd.com'
       }, {
-        image: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224138123-197921773.png',
+        image: config.IMAGE_PATH + 'travel_around.png',
         title: '周边游',
         link: 'http://jd.com'
       }
     ];
     const items3 = [
       {
-        image: 'ribencai.png',
+        image: config.IMAGE_PATH + 'ribencai.png',
         title: '日本菜',
         link: 'http://jd.com'
       }, {
-        image: 'spa.png',
+        image: config.IMAGE_PATH + 'spa.png',
         title: 'SPA',
       }, {
-        image: 'wedding.png',
+        image: config.IMAGE_PATH + 'wedding.png',
         title: '结婚',
         link: 'http://jd.com'
       }, {
-        image: 'study.png',
+        image: config.IMAGE_PATH + 'study.png',
         title: '学习培训',
         link: 'http://jd.com'
       }, {
-        image: 'xican.png',
+        image: config.IMAGE_PATH + 'xican.png',
         title: '西餐',
         link: 'http://jd.com'
       }, {
-        image: 'huochepiao.png',
+        image: config.IMAGE_PATH + 'huochepiao.png',
         title: '火车机票',
         link: 'http://jd.com'
       }, {
-        image: 'BBQ.png',
+        image: config.IMAGE_PATH + 'BBQ.png',
         title: '烧烤',
         link: 'http://jd.com'
       }, {
-        image: 'jiazhuang.png',
+        image: config.IMAGE_PATH + 'jiazhuang.png',
         title: '家装',
         link: 'http://jd.com'
       }, {
-        image: 'pet.png',
+        image: config.IMAGE_PATH + 'pet.png',
         title: '宠物',
         link: 'http://jd.com'
       }, {
-        image: 'all.png',
+        image: config.IMAGE_PATH + 'all.png',
         title: '全部分类',
       }
     ];
