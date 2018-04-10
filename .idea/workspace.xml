@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9294e005-97c0-4043-b35d-b03502925970" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/mock/mocker.js" afterPath="$PROJECT_DIR$/mock/mocker.js" />
       <change beforePath="$PROJECT_DIR$/src/config/index.jsx" afterPath="$PROJECT_DIR$/src/config/index.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/Category/index.jsx" afterPath="$PROJECT_DIR$/src/containers/Home/Category/index.jsx" />
-      <change beforePath="$PROJECT_DIR$/static/images/01丽人icon_7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01休闲娱乐icon_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01周边游icon_10png.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01外卖icon_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01度假出行icon_8.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01火锅icon_6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01电影icon_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01美食icon_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01足疗按摩icon_9.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/01酒店icon_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02亲子icon_7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02小吃快餐icon_8.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02生活服务icon_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02美发icon_6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02自助餐icon_9.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02运动健身icon_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/02酒吧icon_10.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,18 +29,28 @@
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Home/Discount/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="319">
               <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mocker.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mock/mocker.js">
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/Home/Category/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+            <state relative-caret-position="166">
+              <caret line="92" column="25" lean-forward="true" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="98" lean-forward="false" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -90,6 +79,7 @@
       <find>noImplicitAny</find>
       <find>types</find>
       <find>Discount</find>
+      <find>massag.png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -128,10 +118,10 @@
         <option value="$PROJECT_DIR$/src/containers/Home/Banner/style.scss" />
         <option value="$PROJECT_DIR$/tslint.json" />
         <option value="$PROJECT_DIR$/src/containers/Home/index.tsx" />
-        <option value="$PROJECT_DIR$/src/config/index.jsx" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/containers/Home/Category/index.jsx" />
         <option value="$PROJECT_DIR$/mock/mocker.js" />
+        <option value="$PROJECT_DIR$/src/config/index.jsx" />
       </list>
     </option>
   </component>
@@ -158,8 +148,8 @@
     <handled-path value="$PROJECT_DIR$/src/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="148" />
-    <option name="y" value="46" />
+    <option name="x" value="22" />
+    <option name="y" value="44" />
     <option name="width" value="1513" />
     <option name="height" value="877" />
   </component>
@@ -226,13 +216,22 @@
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="Category" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
@@ -274,8 +273,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/containers/Home" />
     </key>
   </component>
@@ -333,12 +332,12 @@
       <workItem from="1522835110460" duration="2007000" />
       <workItem from="1522896696894" duration="27374000" />
       <workItem from="1523188181790" duration="2356000" />
-      <workItem from="1523369661831" duration="1813000" />
+      <workItem from="1523369661831" duration="2162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43559000" />
+    <option name="totallyTimeSpent" value="43908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,7 +349,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="148" y="46" width="1513" height="877" extended-state="0" />
+    <frame x="22" y="44" width="1513" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20289855" sideWeight="0.49737188" order="11" side_tool="false" content_ui="tabs" />
@@ -362,7 +361,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14544237" sideWeight="0.5300353" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6060606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35573122" sideWeight="0.5512484" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35573122" sideWeight="0.5512484" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -723,16 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Home/Category/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!block;n#render#0;n#Category#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Home/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-635">
@@ -743,8 +732,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Home/Discount/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="319">
           <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Home/Category/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="92" column="25" lean-forward="true" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/mocker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="68" column="60" lean-forward="false" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -752,15 +757,7 @@
     <entry file="file://$PROJECT_DIR$/src/config/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="96" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/mocker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <caret line="5" column="98" lean-forward="false" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
           <folding />
         </state>
       </provider>
