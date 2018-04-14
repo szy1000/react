@@ -1,7 +1,16 @@
-body{
-	margin: 0;
-	background-color: $body-bg;
-	p{
-		font-size: 16px;
-	}
+body {
+  margin: 0;
+  background-color: $body-bg;
+  p {
+    font-size: 16px;
+  }
+}
+
+
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
 }

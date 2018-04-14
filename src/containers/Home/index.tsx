@@ -5,7 +5,6 @@ import Header from './Header/index';
 import Category from './Category/index.jsx';
 import Discount from './Discount/index';
 import Guess from './Guess/index';
-import Banner from './Banner/index';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -57,18 +56,6 @@ class Home extends React.Component<Props, State> {
         <Category/>
         <Discount/>
         <Guess/>
-        <div>
-          地址：{this.props.home.address}
-          电话：{this.props.home.tel}
-        </div>
-        <img src={require('../../static/images/webpack.jpeg')} alt="logo"/>
-        <button onClick={() => {
-          this.setState({
-            value: (this.state.value + 1)
-          })
-        }}>add
-        </button>
-        <Banner {...this.props} parentFn={this.parentFn.bind(this)} {...this.state}/>
       </div>
     )
   };
@@ -79,19 +66,6 @@ class Home extends React.Component<Props, State> {
       tel: '139'
     })
   }
-
-  parentFn() {
-    this.setState({
-      value: (this.state.value - 1)
-    })
-  }
-
-  changeParentData() {
-    this.setState({
-      sentence: 'has\'t changed'
-    })
-  }
-
 }
 
 // function mapStateToProps(state: any) {
