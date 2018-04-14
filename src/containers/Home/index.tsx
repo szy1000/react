@@ -4,6 +4,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import Header from './Header/index';
 import Category from './Category/index.jsx';
 import Discount from './Discount/index';
+import Guess from './Guess/index';
 import Banner from './Banner/index';
 
 import { connect } from 'react-redux';
@@ -55,6 +56,7 @@ class Home extends React.Component<Props, State> {
         <Header cityName={"南京"}/>
         <Category/>
         <Discount/>
+        <Guess/>
         <div>
           地址：{this.props.home.address}
           电话：{this.props.home.tel}
